@@ -1,7 +1,7 @@
 const url = "localhost:8000";
 
-export const chatUrl = `ws://${url}/ws`;
 export const baseUrl = `http://${url}`;
+export const chatUrl = window.location.protocol === "http:" ? `ws://${url}/ws` : `wss://${url}/ws`
 
 export const accountChangePasswordUrl = `${baseUrl}/rest-auth/password/change/`;
 export const accountLoginUrl = `${baseUrl}/rest-auth/login/`;

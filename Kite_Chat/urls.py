@@ -1,5 +1,6 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
+from django.views.generic import TemplateView
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -17,7 +18,8 @@ urlpatterns = [
 	path('rest-auth/', include('rest_auth.urls')),
 	path('rest-auth/registration/', include('rest_auth.registration.urls')),
 	path('', include('users.urls')),
-	path('', include('chats.urls'))
+	path('', include('chats.urls')),
+	path('', TemplateView.as_view(template_name='index.html')),
 ]
 
 
