@@ -1,7 +1,7 @@
-const url = "localhost:8000";
+const url = "kite-chat-app.herokuapp.com";
 
-export const baseUrl = `http://${url}`;
-export const chatUrl = window.location.protocol === "http:" ? `ws://${url}/ws` : `wss://${url}/ws`
+export const baseUrl = window.location.protocol === "http:" ? `http://${url}` : `https://${url}`;
+export const chatUrl = window.location.protocol === "http:" ? `ws://${url}/ws` : `wss://${url}/ws`;
 
 export const accountChangePasswordUrl = `${baseUrl}/rest-auth/password/change/`;
 export const accountLoginUrl = `${baseUrl}/rest-auth/login/`;
