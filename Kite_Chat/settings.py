@@ -112,6 +112,8 @@ ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_PRESERVE_USERNAME_CASING = False
 
 CORS_ALLOWED_ORIGINS = [
+    "http://kite-chat-app.herokuapp.com",
+    "https://kite-chat-app.herokuapp.com",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
     "http://localhost:3000",
